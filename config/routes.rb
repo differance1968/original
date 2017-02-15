@@ -1,4 +1,41 @@
 Rails.application.routes.draw do
+  get 'texts/index'
+
+  get 'texts/add'
+
+  get 'texts/edit'
+
+  get 'texts/delete'
+
+  get 'handouts/index'
+
+  get 'handouts/add'
+
+  get 'handouts/edit'
+
+  get 'handouts/delete'
+
+  get 'grammars/index'
+
+  get 'grammars/add'
+
+  get 'grammars/edit'
+
+  get 'grammars/delete'
+
+  get 'words/index'
+
+  get 'words/add'
+
+  get 'words/edit'
+
+  get 'words/delete'
+
+  root 'static_pages#index'
+  get 'static_pages/index'
+
+  get 'static_pages/home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
