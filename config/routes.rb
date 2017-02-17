@@ -1,40 +1,23 @@
 Rails.application.routes.draw do
-  get 'texts/index'
 
-  get 'texts/add'
+  get 'users/new'
 
-  get 'texts/edit'
+  get 'question_words/quiz'
 
-  get 'texts/delete'
+  get 'question_words/answer'
 
-  get 'handouts/index'
+  get 'question_word/quiz'
 
-  get 'handouts/add'
+  get 'question_word/answer'
 
-  get 'handouts/edit'
+  get 'question_grammars/quiz'
 
-  get 'handouts/delete'
+  get 'question_grammars/answer'
 
-  get 'grammars/index'
-
-  get 'grammars/add'
-
-  get 'grammars/edit'
-
-  get 'grammars/delete'
-
-  get 'words/index'
-
-  get 'words/add'
-
-  get 'words/edit'
-
-  get 'words/delete'
-
-  root 'static_pages#index'
-  get 'static_pages/index'
-
-  get 'static_pages/home'
+  root to:'static_pages#home'
+  get 'signup', to:'users#new'
+  
+  resources:users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
